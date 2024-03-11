@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>video</title>
+    <script src="https://kit.fontawesome.com/c2530e8ef6.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
+    <script src="JS/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/section.css">
+    <link rel="stylesheet" type="text/css" href="CSS/filter.css">
+	 <link rel="stylesheet" href="CSS/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="CSS/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="CSS/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="CSS/video-streaming.css" type="text/css">
+    <link rel="stylesheet" href="CSS/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="CSS/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="CSS/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css">
+    <!-- <link rel="stylesheet" href="CSS/list.css" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="CSS/searchbar.css">
+</head>
+<body>
+    <style>
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #242428; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424245; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+    </style>
+
+    <header>
+            <div class="containerr" id="top">
+  <nav>
+    <a href="#0" class="js-menu-open menu-open">
+     <i class="fa-solid fa-bars"></i>
+    </a>
+  </nav>
+  <div class="js-side-nav-container side-nav-container">
+    <div class="js-side-nav side-nav">
+      <a href="#0" class="js-menu-close menu-close">
+        <p><i style="margin-right: 9px;"  class="fa-solid fa-angle-left"></i>Close menu</p>
+      </a>
+     <div class="container-content">
+        <p>Latest</p>
+            <p>Popular</p>
+                <p>Most watched</p>
+                    <p>Horror</p>
+
+     </div>
+    </div>
+
+  </div>
+
+</div>
+            
+
+            <a href="home.html"><img src=" IMG/hinata-kid.gif" class="logo"></a>
+            
+        <form id="searchForm" action="/search" method="GET">
+        <div class="search-container">
+        <div style="display: flex;">
+        <input type="text"  name="query" class="search-input"id="searchInput" placeholder="Search for anime..." autocomplete="off">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <ul id="autocompleteList"></ul>
+    </div>
+    </form>
+    <script src="JS/srv.js"></script>
+
+
+
+            <ul>
+                    
+            
+                                <div class="login">
+                            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                              </div>
+
+                            <div  id="id01" class="modal">
+
+<div class="container_login">
+  
+    <div class="form-container" id="login-form">
+        <h1>Welcome Back!</h1>
+        <div class="flex-box">
+        <div class="lg-img">
+            <img src="mkf.png">
+
+        </div>
+      
+      <form>
+ 
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#" id="signup-link">Sign up</a></p>
+      </form>
+      </div>
+    </div>
+
+    <div class="form-container" id="signup-form" style="display: none;">
+      <h1>Sign Up</h1>
+      <form>
+        <label for="new-username">Username</label>
+        <input type="text" id="new-username" name="new-username" required>
+        <label for="new-email">Email</label>
+        <input type="email" id="new-email" name="new-email" required>
+        <label for="new-password">Password</label>
+        <input type="password" id="new-password" name="new-password" required>
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+                        
+                            
+            </ul>
+                
+
+
+        </header>
+
+
+	 <section class="anime-details spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" style="width:1200px;">
+                <div class="dsa" style="display:flex; position:relative; justify-content: space-between; width: 1200px;">
+                    <div class="anime__video__player">
+                        <video id="player" playsinline controls data-poster="IMG/crew2.jpg">
+                            <!-- Default video source -->
+                            <source id="videoSource" src="intro.mp4" type="video/mp4" />
+                            <!-- Captions are optional -->
+                            <track kind="captions" label="English captions" src="#" srclang="en" default />
+                        </video>
+                    </div>
+                    <div class="anime__details__episodes">
+                        <div class="section-title">
+                            <h5>List Name</h5>
+                        </div>
+                        <!-- Add unique IDs to each episode link -->
+                        <a href="#" onclick="changeVideoSource('VIDEOS/intro.mp4')" id="episode1"> 01</a>
+                        <a href="#" onclick="changeVideoSource('VIDEOS/luffy.mp4')"> 02</a>
+                        <a href="#" onclick="changeVideoSource('VIDEOS/episode2.mp4')"> 03</a>
+                        <a href="#" onclick="changeVideoSource('VIDEOS/luffy.mp4')"> 04</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 05</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 06</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 07</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 08</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 09</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 11</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 12</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 13</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 14</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 15</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 16</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 17</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 18</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 20</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 21</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 22</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 23</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 25</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 26</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 27</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 28</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 29</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 30</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 31</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 32</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 33</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 34</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 35</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 36</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 37</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 38</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 39</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 40</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 41</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 42</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 43</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 44</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 45</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 46</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 47</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 48</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 49</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 50</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 51</a>
+                         <a href="#" onclick="changeVideoSource('episode2.mp4')"> 32</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 33</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 34</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 35</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 36</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 37</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 38</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 39</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 40</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 41</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 42</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 43</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 44</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 45</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 46</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 47</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 48</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 49</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 50</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 51</a>
+                         <a href="#" onclick="changeVideoSource('episode2.mp4')"> 32</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 33</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 34</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 35</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 36</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 37</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 38</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 39</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 40</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 41</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 42</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 43</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 44</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 45</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 46</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 47</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 48</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 49</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 50</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 51</a>
+                         <a href="#" onclick="changeVideoSource('episode2.mp4')"> 32</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 33</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 34</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 35</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 36</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 37</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 38</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 39</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 40</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 41</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 42</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 43</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 44</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 45</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 46</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 47</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 48</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 49</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 50</a>
+                        <a href="#" onclick="changeVideoSource('episode2.mp4')"> 51</a>
+                        <!-- Add more episodes as needed -->
+                        <!-- ... -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="anime__details__form">
+                    <div class="section-title">
+                        <h5>Your Comment</h5>
+                    </div>
+                    <form action="#">
+                        <textarea placeholder="Your Comment"></textarea>
+                        <button type="submit" style="background: #90EE90; color: #333;"><i class="fa fa-location-arrow"></i> Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function changeVideoSource(source) {
+        // Get the video element
+        var video = document.getElementById('player');
+        
+        // Update the video source
+        document.getElementById('videoSource').src = source;
+        
+        // Reload the video to apply the changes
+        video.load();
+        
+        // Play the video
+        video.play();
+
+    }
+</script>
+
+    <!-- Anime Section End -->
+
+
+    <section class="product"> 
+  <!-- div class="row-header">
+     <h5></h5><h1 style="margin-right:40px; width:700px;">Popular</h1><h4 style="width:300px;"> View all <i class="fa-solid fa-arrow-right"></i></h4>
+     <h5></h5><h1>Popular</h1>
+
+
+      <p data-filter="all" class="active">All</p>
+        <p data-filter="day">Day</p>
+        <p data-filter="week">week</p>
+        <p data-filter="month">Month</p>
+
+      
+ </div>
+      -->
+      
+    <div class="owl-items">  
+    <div>
+    <div>
+
+
+      
+        <div class="product-list-left">
+            <div class="row-header">
+ <div class="left-header" style="display:flex;position: relative; width:100%;" >
+  <div style="display: flex; width:100%; margin: 20px 0px;">
+    <div style="position: relative; width:70%; "><h5></h5><h1>Latest Episode</h1></div>
+
+    <div class="clog" style="display:flex; width:30%;">
+       <h4> <a href="#">View all <i class="fa-solid fa-arrow-right"></i></a></h4>
+      
+     </div>
+     </div>
+     </div>
+     
+   </div>
+    
+
+
+            <div class="product_r">
+
+          <div class="checking" style="display:block;">
+            
+            <div class="product1 setbg" style="background-image:url(IMG/latest-1.jpg);">
+                <span><i class="fa-solid fa-star"></i> 8.7</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            </div>
+            <h3 >KamiErabi GOD.app</h3> 
+             </div>
+
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/latest-2.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            
+
+               
+            </div>
+            <h3>16bit Sensation: Another Layer</h3> 
+             </div>
+              <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/latest-3.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Mushishi Zoku Shou: Suzu no Shizuku 2</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/latest-4.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Kizuna no Allele Season 2</h3> 
+             </div>
+     
+     
+
+                            
+              
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/latest-5.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Nights with a Cat
+            </h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/latest-6.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Umamusume: Pretty Derby Season 3</h3> 
+             </div>
+
+             <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/list6.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Maitetsu 2nd Season</h3> 
+             </div>
+
+                          <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/list7.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Dr. Stone 3rd Season Part 2</h3> 
+             </div>
+
+             
+
+</div>
+
+ 
+            
+
+</div>
+<br>
+<br>
+
+        <div class="product-list-left">
+            <div class="row-header">
+ <div class="left-header" style="display:flex;position: relative; width:100%;" >
+  <div style="display: flex; width:100%; margin: 20px 0px;">
+    <div style="position: relative; width:70%; "><h5></h5><h1>Latest Episode</h1></div>
+
+    <div class="clog" style="display:flex; width:30%;">
+       <h4> <a href="#">View all <i class="fa-solid fa-arrow-right"></i></a></h4>
+      
+     </div>
+     </div>
+     </div>
+   </div>
+    
+
+
+            <div class="product_r">
+
+            <div class="checking" style="display:block;">
+            
+            <div class="product1 setbg" style="background-image:url(IMG/popular-6.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            </div>
+            <h3 >Monogatari Series: Second Season</h3> 
+             </div>
+
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/recent-2.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            
+
+               
+            </div>
+            <h3>Fate/stay night Movie: Heaven's Feel - II. Lost</h3> 
+             </div>
+              <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/recent-3.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Mushishi Zoku Shou: Suzu no Shizuku 2</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/recent-4.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Fate/Zero 2nd Season</h3> 
+             </div>
+                            
+         
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/popular-3.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Shirogane Tamashii hen Kouhan sen 1</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/popular-4.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Rurouni Kenshin: Meiji Kenkaku Romantan</h3> 
+             </div>
+
+</div>
+</div>
+
+
+
+        
+
+<!-- coder adder -->
+
+        
+
+ </div>
+ <br>
+ <br>
+         <div class="product-list-left">
+            <div class="row-header">
+ <div class="left-header" style="display:flex;position: relative; width:100%;" >
+  <div style="display: flex; width:100%; margin: 20px 0px;">
+    <div style="position: relative; width:70%; "><h5></h5><h1>Latest Episode</h1></div>
+
+    <div class="clog" style="display:flex; width:30%;">
+       <h4> <a href="#">View all <i class="fa-solid fa-arrow-right"></i></a></h4>
+      
+     </div>
+     </div>
+     </div>
+   </div>
+    
+
+
+            <div class="product_r">
+
+            <div class="checking" style="display:block;">
+            
+            <div class="product1 setbg" style="background-image:url(IMG/popular-6.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            </div>
+            <h3 >Monogatari Series: Second Season</h3> 
+             </div>
+
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/recent-2.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            
+
+               
+            </div>
+            <h3>Fate/stay night Movie: Heaven's Feel - II. Lost</h3> 
+             </div>
+              <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/recent-3.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Mushishi Zoku Shou: Suzu no Shizuku 2</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/recent-4.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Fate/Zero 2nd Season</h3> 
+             </div>
+                            
+         
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/popular-3.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Shirogane Tamashii hen Kouhan sen 1</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(IMG/popular-4.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>KamiErabi GOD.app</h3> 
+             </div>
+             <div class="checking" style="display:block;">
+            
+            <div class="product1 setbg" style="background-image:url(IMG/list5.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            </div>
+            <h3 >Monogatari Series: Second Season</h3> 
+             </div>
+             <div class="checking" style="display:block;">
+            
+            <div class="product1 setbg" style="background-image:url(IMG/popular-6.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            </div>
+            <h3 >Monogatari Series: Second Season</h3> 
+             </div>
+
+</div>
+</div>
+
+<!--  <div class="gogo">
+  <div class="product-list-left">
+            <div class="row-header">
+ <div class="left-header" style="display:flex;  color:#cdea61;position: relative; width:100%;" >
+<h5></h5><h1>trending</h1>
+    
+     </div>
+     </div>
+
+
+            <div class="product_r">
+
+          <div class="checking" style="display:block;">
+            
+            <div class="product1 setbg" style="background-image:url(popular-6.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            </div>
+            <h3 >Monogatari Series: Second Season</h3> 
+             </div>
+
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(recent-2.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            
+
+               
+            </div>
+            <h3>Fate/stay night Movie: Heaven's Feel - II. Lost</h3> 
+             </div>
+              <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(recent-3.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Mushishi Zoku Shou: Suzu no Shizuku 2</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(recent-4.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Fate/Zero 2nd Season</h3> 
+             </div>
+           
+         </div>
+ 
+            
+
+</div>
+
+
+             <div class="product-middle">
+                <div class="row-header">
+ <div class="left-header" style="display:flex;  color:#cdea61; justify-content: space-between; position: relative; width:100%;" >
+    <h4><a href="#">View all <i class="fa-solid fa-arrow-right"></i></a></h4>
+</div> 
+ </div>
+    
+                            
+              
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(popular-3.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Shirogane Tamashii hen Kouhan sen 1</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(popular-4.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Rurouni Kenshin: Meiji Kenkaku Romantan</h3> 
+             </div>
+</div>
+</div> -->
+
+
+
+<br>
+<br>
+
+<!--  <div class="gogo">
+  <div class="product-list-left">
+            <div class="row-header">
+ <div class="left-header" style="display:flex;  color:#cdea61;position: relative; width:100%;" >
+<h5></h5><h1>Popular show</h1>
+    
+     </div>
+     </div>
+
+
+            <div class="product_r">
+
+          <div class="checking" style="display:block;">
+            
+            <div class="product1 setbg" style="background-image:url(popular-6.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            </div>
+            <h3 >Monogatari Series: Second Season</h3> 
+             </div>
+
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(recent-2.jpg);">
+                <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            
+
+               
+            </div>
+            <h3>Fate/stay night Movie: Heaven's Feel - II. Lost</h3> 
+             </div>
+              <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(recent-3.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Mushishi Zoku Shou: Suzu no Shizuku 2</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(recent-4.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+
+               
+            </div>
+            <h3>Fate/Zero 2nd Season</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(popular-2.jpg);">
+            <span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+            </div>
+            <h3>Kizumonogatari III: Reiket su-hen</h3> 
+             </div>
+         </div>
+ 
+            
+
+</div>
+
+
+             <div class="product-middle">
+                <div class="row-header">
+ <div class="left-header" style="display:flex;  color:#cdea61; justify-content: space-between; position: relative; width:100%;" >
+    <h4><a href="#">View all <i class="fa-solid fa-arrow-right"></i></a></h4>
+</div> 
+ </div>
+    
+                            
+              
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(popular-3.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Shirogane Tamashii hen Kouhan sen 1</h3> 
+             </div>
+               <div class="checking" style="display:block; margin: 0px;">
+            <div class="product1 setbg " style="background-image:url(popular-4.jpg);">
+            
+<span> 18/18</span>
+            
+
+               <div  class="list-details">
+            <p><i class="fa-solid fa-comment"></i>11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+               
+            </div>
+            <h3>Rurouni Kenshin: Meiji Kenkaku Romantan</h3> 
+             </div>
+</div>
+</div> -->
+</div>
+
+<!-- code adder -->
+
+ <div class="product-list-right" >
+  <h5></h5><h2 style="color:#90EE90; text-transform: uppercase; margin: 20px 0px;">Genres</h2>
+   
+      <div class="general">
+
+
+        <div style="display: flex; padding: 15px;">
+        
+          
+      <div>
+          <p style="color:#ccabda;">Horror</p>
+           <p style="color:#82dac6;">Romantic</p>
+            <p style="color:#ffdd95;">Action</p>
+             <p style="color:#fc887b;">Funny</p>
+              <p style="color:#abccd8;">Action</p>
+               <p style="color:#d8b2ab;">love</p>
+               </div>
+               <div>
+                <p style="color:#abccd8;">Fantasy</p>
+           <p style="color:#fc887b;">Game</p>
+            <p style="color:#d8b2ab;">Magic</p>
+             <p style="color:#ccabda;">Drama</p>
+              <p style="color:#ffdd95;">Mystery</p>
+               <p style="color:#82dac6;">Adventure</p>
+               </div>
+               <div>
+                <p style="color:#ffdd95;">Kids</p>
+           <p style="color:#abccd8;">Comedy</p>
+            <p style="color:#ccabda;">Demons</p>
+             <p style="color:#82dac6;">Pardoy</p>
+              <p style="color:#d8b2ab;">Music</p>
+               <p style="color:#fc887b;">Police</p>
+                  <p style="color:#fc887b;" class="content">Police</p>
+
+
+               </div>
+ 
+
+</div>
+<div>
+<div style="display:flex;">
+  <input type="checkbox" id="check">
+     <div class="content">
+  
+                <p style="color:#ffdd95;">Kids</p>
+           <p style="color:#abccd8;">Comedy</p>
+            
+               </div>
+                  <div class="content">
+  
+                <p style="color:#ffdd95;">Kids</p>
+           <p style="color:#abccd8;">Comedy</p>
+            
+               </div>
+                  <div class="content">
+  
+                <p style="color:#ffdd95;">Kids</p>
+           <p style="color:#abccd8;">Comedy</p>
+            
+               </div>
+             </div>
+             <div class="ctn">
+                           <label for="check">
+
+<div class="show" style="cursor: pointer;" >
+
+  
+                  <P><label for="check">See More</label></P>
+                  </div>
+
+              
+ </label>
+ </div>
+
+  </div>
+               <label for="check">
+
+<div class="show" style="cursor: pointer;" >
+
+  
+                  <P><label for="check">See More</label></P>
+                  </div>
+
+               </div>
+ </label>
+               
+
+       
+        <br>
+        <br><br>
+      <div class="roww-header" style="justify-content: space-between;">
+    <div>
+     <h5></h5><h1>Top View</h1>
+     </div>
+
+
+      
+        <span data-filter="day">Day</span>
+        <span data-filter="week">week</span>
+        <span  data-filter="all" class="active" >Month</span>
+
+      
+ </div>
+
+    
+      <div class="products">
+   
+
+        <div class="productf" data-filter="day" style="background-image:url('IMG/tv-1.jpg');">
+            <div class="filter-tt">
+
+           <div class="class-a">
+               <div  class="list-detail-mode">
+            <p style="background:#cbea63; color:#333; font-weight: 600;">11/11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+           </div>
+           <div class="class-b">
+             <h5>
+              <a href="#">
+              Boruto: Naruto next generations</a>
+            </h5>
+           </div>
+            
+        </div>
+
+        </div>
+        <div class="productf" data-filter="week" style="background-image:url('IMG/tv-2.jpg') ;">
+            <div class="filter-tt">
+
+           <div class="class-a">
+               <div  class="list-detail-mode">
+            <p style="background:#cbea63; color:#333; font-weight: 600;">11/11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+           </div>
+           <div class="class-b">
+             <h5>
+              <a href="#">
+              The Seven Deadly Sins: Wrath of the Gods</a>
+            </h5>
+           </div>
+            
+        </div>
+        </div>
+        <div class="productf" data-filter="month" style="background-image:url('IMG/tv-3.jpg') ;">
+           <div class="filter-tt">
+
+           <div class="class-a">
+               <div  class="list-detail-mode">
+            <p style="background:#cbea63; color:#333; font-weight: 600;">11/11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+           </div>
+           <div class="class-b">
+             <h5>
+              <a href="#">
+              Sword art online alicization war of underworld</a>
+            </h5>
+           </div>
+            
+        </div>
+        </div>
+        <div class="productf" data-filter="day" style="background-image:url('IMG/tv-4.jpg') ;">
+          <div class="filter-tt">
+
+           <div class="class-a">
+               <div  class="list-detail-mode">
+            <p style="background:#cbea63; color:#333; font-weight: 600;">11/11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+           </div>
+           <div class="class-b">
+             <h5>
+              <a href="#">
+              Fate/stay night: Heaven's Feel I. presage flower</a>
+            </h5>
+           </div>
+            
+        </div>
+        </div>
+        <div class="productf" data-filter="week" style="background-image:url('IMG/tv-5.jpg') ;">
+          <div class="filter-tt">
+
+           <div class="class-a">
+               <div  class="list-detail-mode">
+            <p style="background:#cbea63; color:#333; font-weight: 600;">11/11</p>
+            <p><i class="fa-regular fa-eye"></i> 9911</p>
+        </div>
+           </div>
+           <div class="class-b">
+             <h5>
+              <a href="#">
+              Fate stay night unlimited blade works</a>
+            </h5>
+           </div>
+            
+        </div>
+        </div>
+        
+      
+        
+    </div>
+
+    <div class="items-header">
+      <h2>most view</h2>
+      
+    </div>
+   
+
+      <div class="items-list">
+        <div class="list1">
+          <div class="count">
+            <h1>01</h1>
+          </div>   
+          <img src="IMG/l.jpg">
+          <div class="context">
+          <p> One Piece</p>
+
+               <div class="vwl">
+            <p style="padding: 0px 8px;"><i class="fa-solid fa-closed-captioning"></i> 1082</p>
+      
+            
+            <p style="background:#e3b5cd ; padding: 0px 4px;"><i class="fa-solid fa-microphone"></i> 1032</p>
+        </div>
+               
+            </div>
+
+          
+          
+          </div>
+
+          
+        </div>
+        <div class="list1">
+          <div class="count">
+            <h1>02</h1>
+          </div>   
+          <img src="IMG/ds.jpg">
+          <div class="context">
+          <p style="-webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;"> Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles</p>
+          
+              <div class="vwl">
+            <p style="padding: 0px 8px;"><i class="fa-solid fa-closed-captioning"></i> 28</p>
+      
+            
+            <p style="background:#e3b5cd ; padding: 0px 4px;"><i class="fa-solid fa-microphone"></i> 28</p>
+        </div>
+              
+          </div>
+
+          
+        </div>
+        <div class="list1">
+          <div class="count">
+            <h1>03</h1>
+          </div>   
+          <img src="IMG/n.jpg">
+          <div class="context">
+          <p> Naruto
+                           <div class="vwl">
+            <p style="padding: 0px 8px;"><i class="fa-solid fa-closed-captioning"></i> 200</p>
+      
+            
+            <p style="background:#e3b5cd ; padding: 0px 4px;"><i class="fa-solid fa-microphone"></i> 200</p>
+        </div>
+          </p>
+          
+          
+          </div>
+          
+        </div>
+          <div class="list1">
+            <div class="count">
+            <h1>04</h1>
+          </div>   
+          <img src="b.png">
+          <div class="context">
+          <p> bleach
+            <div class="vwl">
+            <p style="padding: 0px 8px;"><i class="fa-solid fa-closed-captioning"></i> 376</p>
+      
+            
+            <p style="background:#e3b5cd ; padding: 0px 4px;"><i class="fa-solid fa-microphone"></i> 370</p>
+        </div>
+          </p>
+          
+          
+          </div>
+          
+        </div>
+        <div class="list1">
+          <div class="count">
+            <h1>05</h1>
+          </div>          
+          <img src="IMG/at.jpg">
+          <div class="context">
+          <p> Attack On Titan
+            <div class="vwl">
+            <p style="padding: 0px 8px;"><i class="fa-solid fa-closed-captioning"></i> 376</p>
+      
+            
+            <p style="background:#e3b5cd ; padding: 0px 4px;"><i class="fa-solid fa-microphone"></i> 370</p>
+        </div>
+          </p>
+          
+          
+          </div>
+          
+        </div>
+          <div class="list1">
+            <div class="count">
+            <h1>06</h1>
+          </div>   
+          <img src="IMG/sxf.jpg">
+          <div class="context">
+          <p> SPY x Family
+            <div class="vwl">
+            <p style="padding: 0px 8px;"><i class="fa-solid fa-closed-captioning"></i> 376</p>
+      
+            
+            <p style="background:#e3b5cd ; padding: 0px 4px;"><i class="fa-solid fa-microphone"></i> 370</p>
+        </div>
+          </p>
+          
+          
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+     </div>
+
+
+    
+<script src="JS/filter.js"></script>
+    </section>
+<script src="JS/jquery-3.3.1.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/player.js"></script>
+    <script src="JS/jquery.nice-select.min.js"></script>
+    <script src="JS/mixitup.min.js"></script>
+    <script src="JS/jquery.slicknav.js"></script>
+    <script src="JS/owl.carousel.min.js"></script>
+    <script src="JS/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>play</title>
+  <link rel="Website Icon"   href="IMG/pirot.png">
+	<link rel="stylesheet" type="text/css" href="CSS/play-about.css">
+	<link rel="stylesheet" type="text/css" href="CSS/login.css">
+  <link rel="stylesheet" type="text/css" href="CSS/filter.css">
+  <link rel="stylesheet" type="text/css" href="CSS/searchbar.css">
+
+	<script src="https://kit.fontawesome.com/c2530e8ef6.js" crossorigin="anonymous"></script>
+	<script src="JS/login.js"></script>
+    
+
+
+</head>
+
+	<body style="background:#242428;">
+	<style>
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #242428; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424245; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+	</style>
+		<header>
+			<div class="container" id="top">
+  <nav>
+    <a href="#0" class="js-menu-open menu-open">
+     <i class="fa-solid fa-bars"></i>
+    </a>
+  </nav>
+  <div class="js-side-nav-container side-nav-container">
+    <div class="js-side-nav side-nav">
+      <a href="#0" class="js-menu-close menu-close">
+        <p><i style="margin-right: 9px;"  class="fa-solid fa-angle-left"></i>Close menu</p>
+      </a>
+     <div class="container-content">
+     	<p>Latest</p>
+     		<p>Popular</p>
+     			<p>Most watched</p>
+     				<p>Horror</p>
+
+     </div>
+    </div>
+
+  </div>
+
+</div>
+			
+
+			<a href="index.html"><img src="IMG/hinata-kid.gif" class="logo"></a>
+			
+		<form id="searchForm" action="/search" method="GET">
+        <div class="search-container">
+        <div style="display: flex;">
+        <input type="text"  name="query" class="search-input"id="searchInput" placeholder="Search for anime..." autocomplete="off">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <ul id="autocompleteList"></ul>
+    </div>
+    </form>
+    <script src="srv.js"></script>
+
+
+
+			<ul>
+					
+			
+								<div class="login">
+							<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+							  </div>
+
+							<div  id="id01" class="modal">
+
+<div class="container_login">
+  
+    <div class="form-container" id="login-form">
+    	<h1>Welcome Back!</h1>
+    	<div class="flex-box">
+    	<div class="lg-img">
+    		<img src="mkf.png">
+
+    	</div>
+      
+      <form>
+ 
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#" id="signup-link">Sign up</a></p>
+      </form>
+      </div>
+    </div>
+
+    <div class="form-container" id="signup-form" style="display: none;">
+      <h1>Sign Up</h1>
+      <form>
+        <label for="new-username">Username</label>
+        <input type="text" id="new-username" name="new-username" required>
+        <label for="new-email">Email</label>
+        <input type="email" id="new-email" name="new-email" required>
+        <label for="new-password">Password</label>
+        <input type="password" id="new-password" name="new-password" required>
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+						
+							
+			</ul>
+				
+
+
+		</header>
+		<section class="section2">
+      <div class="display-section">
+				<div class="item-display">
+					<div class="d-item">
+            <img src="IMG/n.jpg">
+            <span><i class="fa-solid fa-wifi"></i>watch with anizone</span>
+            
+          </div>
+          <div class="d-item-r">
+            <div style="display:flex;">
+
+            <p style="font-size: 15px;">Home</p>
+            <ul>
+              <li>TV</li>
+              <li style="color: #777777;">Naruto</li>
+            </ul>
+            </div>
+
+            <h1>Naruto</h1>
+            <div class="ep-section" style="display:flex;">
+              <p style="background:#fff;">pg-13</p>
+              <p style="background:palegoldenrod;">HD</p>
+              <p><i class="fa-solid fa-closed-captioning"></i>200</p>
+              <p style="background:#e3b5cd;"><i class="fa-solid fa-microphone"></i>200</p> 
+              <ul><li>TV</li>
+                <li>20m</li>
+              </ul>
+              
+            </div>
+            <div class="button-watch">
+              <span><i class="fa-solid fa-play"></i>Watch Now</span>
+              <span style="background:#fff;"><i class="fa-solid fa-plus"></i>Add to List</span>
+              
+            </div>
+            <div class="i-description">
+            <p>Gold Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existenc...+ More</p>
+            <div>
+            <p>AniWatch is the best site to watch One Piece SUB online, or you can even watch One Piece DUB in HD quality. You can also find Toei Animation anime on AniWatch website.</p>
+            </div>
+            </div>
+
+            <div class="social-sectioin">
+  <div class="s-gif">
+    <img>
+    
+  </div>
+  <div class="s-text">
+      <p style="color:#90EE90; font-weight: 600; letter-spacing: 0.5px;">Share Anizone </p>
+      <p>to your friends</p>
+    
+  </div>
+  <div class="s-tel">
+  <i class="fa-brands fa-telegram"></i>   <span></span>
+  </div>
+  <div class="s-tew" >
+    <i class="fa-brands fa-x-twitter"></i></i> <span></span>
+    
+  </div>
+  <div class="s-fac">
+    <i class="fa-brands fa-facebook"></i> <span></span>
+    
+  </div>
+  <div class="s-red">
+    <i class="fa-brands fa-reddit-alien"></i><span></span>
+    
+  </div>
+  <div class="share-s">
+    <span><i class="fa-solid fa-share-nodes"></i></span>
+    
+  </div>
+    
+</div>
+
+          </div>
+					
+				</div>
+				<div class="item-display-details">
+          <div style="width: 230px;">
+            <div>
+          <p style="display:flex;"><span>Japanese:</span>Naruto</p>
+          <p style="display:flex;"><span>Synonyms:</span> OP</p>
+          <p style="display:flex;"><span>Aired:</span>  Oct 20, 1999 to ?</p>
+          <p><span>Premiered:</span> Fall 1999</p>
+          <p><span>Duration:</span> 24m</p>
+          <p><span>Status: </span> Currently Airing</p>
+          <p><span>MAL Score:</span> 8.62</p>
+          <p style="width:100%; height: 0.5px; background:#777777;"></p>
+          </div>
+      
+          <div class="ger-sec">
+            <span>Genres:</span>
+            <p>Action</p>
+            <p>Adventure</p>
+            <p>Comedy</p>
+            <p>Drama</p>
+            <p>Fantasy</p>
+            <p>Shounen</p>
+            <p>Super Power</p>
+            <i style="width:100%; height: 0.5px; margin: 10px 0px; background:#777777;"></i>
+          </div>
+          <div>
+          <p style="display:flex;"><span>Studios:</span>Toei Animation</p>
+          </div>
+        <div style="display:flex; flex-wrap: wrap;">  <p style="width:230px; margin: 0px;"> <span>Producers:</span>Fuji TV, TAP, Shueisha,</p><p style="margin:0px;"> Toei Animation, Funimation, 4Kids Entertainment</p>
+          </div>
+              
+          
+        </div>
+				
+			
+ </div>
+	</section>
+    
+
+  <div class="artist">
+    
+  </div>
+
+  <footer>
+  <div class="top-arrow">
+      <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+  <div class="footer-section">
+
+    <div class="f-logo"style="">
+      <img src="IMG/hinata-kid.gif">
+  <h2 style="color: #90EE90;">Ani</h2><h2>zone</h2>
+      
+    </div>
+    <div style="display:flex; color: #fff; height:18px; gap: 20px; margin-top: 15px; align-items: center;">
+      <h3 style="font-weight: 400;">A-Z List</h3><h4 style="width: 1px; display:flex; position: relative; background:#777777; height:100%;"></h4><p style="font-size: 13px; font-weight:300;">Searching anime order by alphabet name A to Z. </p>
+      
+    </div>
+    <div class="list-oder">
+      <a href="#"><li>A-Z</li></a>
+       <a href="#"><li>A</li></a>
+       <a href="#"><li>B</li></a>
+       <a href="#"><li>C</li></a>
+       <a href="#"><li>D</li></a>
+       <a href="#"><li>E</li></a>
+        <a href="#"><li>F</li></a>
+       <a href="#"><li>G</li></a>
+       <a href="#"><li>H</li></a>
+       <a href="#"><li>I</li></a>
+       <a href="#"><li>J</li></a>
+        <a href="#"><li>K</li></a>
+       <a href="#"><li>L</li></a>
+       <a href="#"><li>M</li></a>
+       <a href="#"><li>N</li></a>
+       <a href="#"><li>O</li></a>
+        <a href="#"><li>P</li></a>
+       <a href="#"><li>Q</li></a>
+       <a href="#"><li>R</li></a>
+       <a href="#"><li>S</li></a>
+       <a href="#"><li>T</li></a>
+        <a href="#"><li>U</li></a>
+       <a href="#"><li>V</li></a>
+       <a href="#"><li>W</li></a>
+       <a href="#"><li>X</li></a>
+       <a href="#"><li>Y</li></a>
+       <a href="#"><li>Z</li></a>
+      
+    </div>
+    
+  </div>
+  <h2></h2>
+   
+ </footer>
+<script>
+	'use strict'
+
+
+class SideNav {
+  
+  constructor () {
+    this.sideNavEl = document.querySelector('.js-side-nav');
+    this.sideNavContainerEl = document.querySelector('.js-side-nav-container');
+    this.showButtonEl = document.querySelector('.js-menu-open');
+    this.closeButtonEl = document.querySelector('.js-menu-close');
+    
+    this.openSideNav = this.openSideNav.bind(this);
+    this.closeSideNav = this.closeSideNav.bind(this);
+    this.blockClicks = this.blockClicks.bind(this);
+    this.onTransitionEnd = this.onTransitionEnd.bind(this);
+    
+    this.addEventListeners();
+  }
+  
+  addEventListeners() {
+    this.showButtonEl.addEventListener('click', this.openSideNav);
+    this.closeButtonEl.addEventListener('click', this.closeSideNav);
+    this.sideNavEl.addEventListener('click', this.blockClicks);
+    this.sideNavContainerEl.addEventListener('click', this.closeSideNav);
+  }
+ 
+  blockClicks(evt) {
+    evt.stopPropagation();
+  }
+  
+  onTransitionEnd(evt) {
+    this.sideNavContainerEl.classList.remove('side-nav-animatable');
+    this.sideNavContainerEl.removeEventListener('transitionend', this.onTransitionEnd);
+  }
+  
+  openSideNav() {
+    this.sideNavContainerEl.classList.add('side-nav-animatable');
+    this.sideNavContainerEl.classList.add('side-nav-visible');
+    this.sideNavContainerEl.addEventListener('transitionend', this.onTransitionEnd);
+  }
+  
+  closeSideNav() {
+    this.sideNavContainerEl.classList.add('side-nav-animatable');
+    this.sideNavContainerEl.classList.remove('side-nav-visible');
+    this.sideNavContainerEl.addEventListener('transitionend', this.onTransitionEnd);
+  }
+   
+ 
+}
+
+new SideNav();
+
+
+
+</script>
+</body>
+</html>

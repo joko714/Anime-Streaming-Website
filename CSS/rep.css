@@ -1,0 +1,214 @@
+
+
+.uk-section {
+  background-color: #0c0c0d;
+  display: flex;
+ 
+
+
+
+}
+.owl-carousel {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+   margin-top: 100px;
+   flex-wrap: wrap;
+   padding: 0px 15px;
+
+  
+
+  
+}
+.owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #6c6d70;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.owl-nav {
+    position: relative;
+    display: flex;
+    top: -100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.owl-nav h2{
+  position: absolute;
+  display: flex;
+  top: -60px;
+  left: 50%;
+}
+.uk-card-primary {
+  border-radius: 8px;
+  display: flex;
+ 
+  transition: 0.5;
+  cursor: pointer;
+  
+
+
+}
+.uk-card-primary i {
+  position: absolute;
+  cursor: pointer;
+  visibility: hidden;
+  top: 43%;
+  left: 43%;
+
+  
+}
+.item0 span {
+  position: absolute;
+  display: flex;
+  color: #888888;
+   align-items: center;
+   justify-content: center;
+   font-size: 15px; 
+}
+
+.item0 p {
+  position: relative;
+  color: #fff;
+  display: flex;
+  margin: 15px;
+  bottom: 30%;
+  justify-content: space-between;
+  padding: 2px 10px;
+  background:#232323;
+  border-radius: 4px;
+  align-items: center;
+  font-size: 13px;
+  letter-spacing:2px;
+}
+.uk-card-primary h3 {
+  color: #fff;
+
+
+}
+.owl-trending h3 {
+  position: absolute;
+  color: #fff;
+  height: 20px;
+  display: flex;
+
+
+
+
+
+
+}
+.uk-card > :last-child {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+p {
+
+}
+.owl-next {
+  background: #3286f0;
+}
+
+.owl-dots {
+  margin-top: 30px;
+}
+.uk-card-title {
+  padding-bottom: 20px;
+}
+ .bgset 
+ {
+  background-position:center;
+  background-size: cover;
+  background-repeat:no-repeat ;
+ }
+ .item0 {
+  background-color: #333;
+  height:325px;
+ width: 220px;
+  border-radius: 8px;
+  margin-bottom: 90px;
+  color: #FFF;
+  cursor: pointer;
+
+
+
+
+ }
+ .uk-card{
+  background: none;
+   height:325px;
+ width: 220px;
+ 
+ 
+ }
+ .uk-card-primary.uk-card-hover:hover{
+  
+    background-color:rgba(255,255,255,.1);
+    backdrop-filter: blur(5px);
+    
+}
+
+.uk-card-primary.uk-card-hover .fa-solid
+{
+  font-size: 40px;
+  visibility: ;
+  cursor: pointer;
+}
+.uk-card-primary.uk-card-hover:hover i{
+  
+    visibility:  visible;
+    
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+   position: relative;
+   width: 100%;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+}
+.item0 h3{
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  font-size: 19px;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+
+ 
+}
+.tx 
+{
+  display:flex; 
+  position:absolute;
+   width:220px; 
+   bottom:20%; 
+   justify-content: space-between;
+    background: transparent;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: #cbea63;
+    color: #FFF;
+    text-decoration: none;
+
+
+}
+
+@media only screen and (min-width:980px) and (max-width:1700px)
+{
+  .owl-stage 
+  {
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0s ease 0s;
+    width: 2499px;
+    gap: 0.94%;
+    display: flex;
+}
+
+}
